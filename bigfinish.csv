@@ -1,0 +1,230 @@
+Number,Order,Title,Author,Doctors,Featuring,Date
+1,7Z,The Sirens of Time,Nicholas Briggs,"5th, 6th, 7th",,July 1999
+2,6PA,Phantasmagoria,Mark Gatiss,5th,Turlough,October 1999
+3,6ZA,Whispers of Terror,Justin Richards,6th,Peri,November 1999
+4,6CA,The Land of the Dead,Stephen Cole,5th,Nyssa,January 2000
+5,7R,The Fearmonger,Jonathan Blum,7th,Ace,February 2000
+6,7CA,The Marian Conspiracy,Jacqueline Rayner,6th,Evelyn,March 2000
+7,7S,"The Genocide Machine
+Dalek Empire, Part 1",Mike Tucker,7th,"Ace, Daleks",April 2000
+8,6QA,Red Dawn,Justin Richards,5th,"Peri, Ice Warriors",May 2000
+9,7CB,The Spectre of Lanyon Moor,Nicholas Pegg,6th,"Evelyn, Brigadier",June 2000
+10,6CB,Winter for the Adept,Andrew Cartmel,5th,Nyssa,July 2000
+11,7CC,"The Apocalypse Element
+Dalek Empire, Part 2",Stephen Cole,6th,"Evelyn, Romana II, Daleks",August 2000
+12,7FA,The Fires of Vulcan,Steve Lyons,7th,Mel,September 2000
+13,SS1,The Shadow of the Scourge,Paul Cornell,7th,"Ace, Benny",November 2000
+14,SS2,The Holy Terror,Robert Shearman,6th,Frobisher,November 2000
+15,6CC,"The Mutant Phase
+Dalek Empire, Part 3",Nicholas Briggs,5th,"Nyssa, Daleks, Thals",December 2000
+16,8B,Storm Warning,Alan Barnes,8th,Charley,January 2001
+17,8C,Sword of Orion,Nicholas Briggs,8th,"Charley, Cybermen",February 2001
+18,8D,The Stones of Venice,Paul Magrs,8th,Charley,March 2001
+19,8E,Minuet in Hell,"Alan W. Lear
+Gary Russell",8th,"Charley, Brigadier",April 2001
+20,6PB,Loups-Garoux,Marc Platt,5th,Turlough,May 2001
+21,7T,Dust Breeding,Mike Tucker,7th,"Ace, The Master",June 2001
+22,7CD,Bloodtide,Jonathan Morris,6th,"Evelyn, Silurians",July 2001
+23,7CE,Project: Twilight,"Cavan Scott
+Mark Wright",6th,"Evelyn, Nimrod",August 2001
+24,6QB,The Eye of the Scorpion,Iain McLaughlin,5th,"Peri, Erimem",September 2001
+25,7U,Colditz,Steve Lyons,7th,"Ace, Klein",October 2001
+26,6CD,Primeval,Lance Parkin,5th,Nyssa,November 2001
+27,7CR,The One Doctor,"Gareth Roberts
+Clayton Hickman",6th,Mel,December 2001
+28,8F,Invaders from Mars,Mark Gatiss,8th,Charley,January 2002
+29,8G,The Chimes of Midnight,Robert Shearman,8th,Charley,February 2002
+30,8H,Seasons of Fear,"Paul Cornell
+Caroline Symcox",8th,"Charley, Nimon",March 2002
+31,8J,Embrace the Darkness,Nicholas Briggs,8th,Charley,April 2002
+32,8K,"The Time of the Daleks
+Dalek Empire, Part 4",Justin Richards,8th,"Charley, Daleks",May 2002
+33,8L,Neverland,Alan Barnes,8th,"Charley, Romana II, Rassilon",June 2002
+34,6CE,Spare Parts,Marc Platt,5th,"Nyssa, Cybermen",July 2002
+35,6ZB,…ish,Phil Pascoe,6th,Peri,August 2002
+36,7V,The Rapture,Joseph Lidster,7th,Ace,September 2002
+37,7CF,The Sandman,Simon A. Forward,6th,Evelyn,October 2002
+38,6QC,The Church and the Crown,"Cavan Scott
+Mark Wright",5th,"Peri, Erimem",November 2002
+39,7EA,Bang-Bang-a-Boom!,"Gareth Roberts
+Clayton Hickman",7th,Mel,December 2002
+40,7CG,Jubilee,Robert Shearman,6th,"Evelyn, Daleks",January 2003
+41,6QD,Nekromanteia,Austen Atkinson,5th,"Peri, Erimem",February 2003
+42,SS4,The Dark Flame,Trevor Baxendale,7th,"Ace, Benny",March 2003
+43,7CH,Doctor Who and the Pirates,Jacqueline Rayner,6th,Evelyn,April 2003
+44,6CF,Creatures of Beauty,Nicholas Briggs,5th,Nyssa,May 2003
+45,7CJ & 7X,Project: Lazarus,"Cavan Scott
+Mark Wright","6th, 7th","Evelyn, Nimrod",June 2003
+46,7EB,Flip-Flop,Jonathan Morris,7th,Mel,July 2003
+47,6EA,Omega,Nev Fountain,5th,Omega,August 2003
+48,6WA,Davros,Lance Parkin,6th,Davros,September 2003
+49,7Y,Master,Joseph Lidster,7th,The Master,October 2003
+50,8M,Zagreus,"Gary Russell
+Alan Barnes","3rd, 5th, 6th,
+7th, 8th","Charley, Romana II, Leela, K-9, Rassilon",November 2003
+51,SS5,The Wormery,"Stephen Cole
+Paul Magrs",6th,Iris Wildthyme,November 2003
+52,8N,Scherzo,Robert Shearman,8th,Charley,December 2003
+53,8P,The Creed of the Kromon,Philip Martin,8th,"Charley, C'rizz",January 2004
+54,8Q,The Natural History of Fear,Jim Mortimore,8th,"Charley, C'rizz",February 2004
+55,8R,The Twilight Kingdom,Will Shindler,8th,"Charley, C'rizz",March 2004
+56,6QE,The Axis of Insanity,Simon Furman,5th,"Peri, Erimem",April 2004
+57,7CK,Arrangements for War,Paul Sutton,6th,Evelyn,May 2004
+58,7W,The Harvest,Dan Abnett,7th,"Ace, Hex, Cybermen",June 2004
+59,6QF,The Roof of the World,Adrian Rigelsford,5th,"Peri, Erimem",July 2004
+60,7CL,Medicinal Purposes,Robert Ross,6th,Evelyn,August 2004
+61,8S,Faith Stealer,Graham Duff,8th,"Charley, C'rizz",September 2004
+62,8T,The Last,Gary Hopkins,8th,"Charley, C'rizz",October 2004
+63,8U,Caerdroia,Lloyd Rose,8th,"Charley, C'rizz",November 2004
+64,8V,The Next Life,"Alan Barnes
+Gary Russell",8th,"Charley, C'rizz, Rassilon",December 2004
+65,7CS,The Juggernauts,Scott Alan Woodard,6th,"Mel, Davros, Daleks, Mechonoids",January 2005
+66,6CG,The Game,Darin Henry,5th,Nyssa,February 2005
+67,7WA,Dreamtime,Simon A. Forward,7th,"Ace, Hex",March 2005
+68,7CT,Catch-1782,Alison Lawson,6th,Mel,April 2005
+69,6QG,Three's A Crowd,Colin Brake,5th,"Peri, Erimem",May 2005
+70,7DA,Unregenerate!,David A. McIntee,7th,Mel,June 2005
+71,6QH,The Council of Nicaea,Caroline Symcox,5th,"Peri, Erimem",July 2005
+72,8W,Terror Firma,Joseph Lidster,8th,"Charley, C'rizz, Samson and Gemma Griffin, Davros, Daleks",August 2005
+73,7CU,Thicker than Water,Paul Sutton,6th,"Mel, Evelyn",September 2005
+74,7WB,LIVE 34,"James Parsons
+Andrew Stirling-Brown",7th,"Ace, Hex",September 2005
+75,8X,Scaredy Cat,Will Shindler,8th,"Charley, C'rizz",October 2005
+76,6PC,Singularity,James Swallow,5th,Turlough,November 2005
+77,8Y,Other Lives,Gary Hopkins,8th,"Charley, C'rizz",December 2005
+78,7CMA,Pier Pressure,Robert Ross,6th,Evelyn,January 2006
+79,7WC,Night Thoughts,Edward Young,7th,"Ace, Hex",February 2006
+80,8YA,Time Works,Steve Lyons,8th,"Charley, C'rizz",March 2006
+81,6QI,The Kingmaker,Nev Fountain,5th,"Peri, Erimem",April 2006
+82,7WD,The Settling,Simon Guerrier,7th,"Ace, Hex",May 2006
+83,8YB,Something Inside,Trevor Baxendale,8th,"Charley, C'rizz",June 2006
+84,7CMB,The Nowhere Place,Nicholas Briggs,6th,Evelyn,July 2006
+85,7DB,Red,Stewart Sheargold,7th,Mel,August 2006
+86,6ZC,The Reaping,Joseph Lidster,6th,"Peri, Cybermen",September 2006
+87,6QJ,The Gathering,Joseph Lidster,5th,"Tegan, Cybermen",September 2006
+88,8YC,Memory Lane,Eddie Robson,8th,"Charley, C'rizz",October 2006
+89,7WE,No Man's Land,Martin Day,7th,"Ace, Hex",November 2006
+90,6YA,Year of the Pig,Matthew Sweet,6th,Peri,December 2006
+91,6CH,"Circular Time
+""Spring""
+""Summer""
+""Autumn""
+""Winter""","Paul Cornell
+Mike Maddox",5th,"Nyssa, Kamelion",January 2007
+92,7WF,Nocturne,Dan Abnett,7th,"Ace, Hex",February 2007
+93,6CI,Renaissance of the Daleks,from a story byChristopher H. Bidmead,5th,"Nyssa, Daleks",March 2007
+94,7C preAA,"I.D. &
+Urgent Calls",Eddie Robson,6th,,April 2007
+95,6QAA,"Exotron &
+Urban Myths",Paul Sutton,5th,Peri,May 2007
+96,7ZA,Valhalla,Marc Platt,7th,,June 2007
+97,7CV,"The Wishing Beast &
+The Vanity Box",Paul Magrs,6th,Mel,July 2007
+98,7ZB,Frozen Time,Nicholas Briggs,7th,Ice Warriors,August 2007
+99,6QK,Son of the Dragon,Steve Lyons,5th,"Peri, Erimem",September 2007
+100,7CMC,"100
+""100 BC""
+""My Own Private Wolfgang""
+""Bedtime Story""
+""The 100 Days of the Doctor""","Jacqueline Rayner
+Rob Shearman
+Joseph Lidster
+Paul Cornell",6th,Evelyn,September 2007
+101,8YD,Absolution,Scott Alan Woodard,8th,"Charley, C'rizz",October 2007
+102,"6QL &
+6QN","The Mind's Eye &
+Mission of the Viyrans","Colin Brake &
+Nicholas Briggs",5th,"Peri, Erimem &
+Peri, Viyrans",November 2007
+103,8YE,The Girl Who Never Was,Alan Barnes,8th,"Charley, Cybermen",December 2007
+104,6QM,The Bride of Peladon,Barnaby Edwards,5th,"Peri, Erimem, Ice Warriors, Osiran",January 2008
+105,7CPA,The Condemned,Eddie Robson,6th,"Charley, DI Menzies",February 2008
+106,7WG,The Dark Husband,David Quantick,7th,"Ace, Hex",March 2008
+107,6CK,The Haunting of Thomas Brewster,Jonathan Morris,5th,"Nyssa, Brewster",April 2008
+108,7CMD,Assassin in the Limelight,Robert Ross,6th,Evelyn,May 2008
+109,7ZC,"The Death Collectors &
+Spider's Shadow",Stewart Sheargold,7th,,June 2008
+110,6CL,The Boy That Time Forgot,Paul Magrs,5th,"Nyssa, Brewster, Adric",July 2008
+111,7CPB,The Doomwood Curse,Jacqueline Rayner,6th,Charley,August 2008
+112,7ZD,"Kingdom of Silver &
+Keepsake",James Swallow,7th,Cybermen,September 2008
+113,6CM,"Time Reef &
+A Perfect World","Marc Platt &
+Jonathan Morris",5th,"Nyssa, Brewster",September 2008
+114,7CPC,Brotherhood of the Daleks,Alan Barnes,6th,"Charley, Daleks, Thals",October 2008
+115,7WH,"Forty Five
+""False Gods""
+""Order of Simplicity""
+""Casualties of War""
+""The Word Lord""","Mark Morris
+Nick Scovell
+Mark Michalowski
+Steven Hall",7th,"Ace, Hex, Nobody No-One",November 2008
+116,7CPE,The Raincloud Man,Eddie Robson,6th,"Charley, DI Menzies",December 2008
+117,6RA,"The Judgement of Isskar
+Key2Time, Part 1",Simon Guerrier,5th,"Amy, Zara, Ice Warriors",January 2009
+118,6RB,"The Destroyer of Delights
+Key2Time, Part 2",Jonathan Clements,5th,"Amy, Black Guardian, White Guardian",February 2009
+119,6RC,"The Chaos Pool
+Key2Time, Part 3",Peter Anghelides,5th,"Amy, Zara, Black Guardian, White Guardian, Romana II",March 2009
+120,7WJ,The Magic Mousetrap,Matthew Sweet,7th,"Ace, Hex, Celestial Toymaker",April 2009
+121,7WK,Enemy of the Daleks,David Bishop,7th,"Ace, Hex, Daleks",May 2009
+122,7WL,The Angel of Scutari,Paul Sutton,7th,"Ace, Hex",June 2009
+123,8Z,"The Company of Friends
+""Benny's Story""
+""Fitz's Story""
+""Izzy's Story""
+""Mary's Story""","Lance Parkin
+Stephen Cole
+Alan Barnes
+Jonathan Morris",8th,"~ Benny
+~ Fitz
+~ Izzy
+~ Mary Shelley",July 2009
+124,7CPF,Patient Zero,Nicholas Briggs,6th,"Charley, Mila, Daleks, Viyrans",August 2009
+125,7CPG,Paper Cuts,Marc Platt,6th,"Charley, Mila, Draconians",September 2009
+126,7CPH,Blue Forgotten Planet,Nicholas Briggs,6th,"Charley, Mila, Viyrans",Late September 2009
+127,6CN,Castle of Fear,Alan Barnes,5th,"Nyssa, Rutans",October 2009
+128,6CO,The Eternal Summer,Jonathan Morris,5th,"Nyssa,
+Maxwell Edison",November 2009
+129,6CP,Plague of the Daleks,Mark Morris,5th,"Nyssa, Daleks",December 2009
+130,7ZE,A Thousand Tiny Wings,Andy Lane,7th,Klein,January 2010
+131,"7ZG &
+7ZF","Survival of the Fittest &
+Klein's Story","Jonathan Clements
+John Ainsworth & Lee Mansfield","7th
+7th, 8th",Klein,February 2010
+132,7ZH,The Architects of History,Steve Lyons,7th,"Klein, Rachel Cooper",March 2010
+133,7CPI,City of Spires,Simon Bovey,6th,Jamie,April 2010
+134,7CPJ,The Wreck of the Titan,Barnaby Edwards,6th,Jamie,May 2010
+135,7CPK,Legend of the Cybermen,Mike Maddox,6th,"Jamie, Zoe, Cybermen",June 2010
+136,6HA,Cobwebs,Jonathan Morris,5th,"Nyssa, Tegan, Turlough",July 2010
+137,6HB,The Whispering Forest,Stephen Cole,5th,"Nyssa, Tegan, Turlough",August 2010
+138,6HC,The Cradle of the Snake,Marc Platt,5th,"Nyssa, Tegan, Turlough, Mara",September 2010
+139,7WM,Project: Destiny,Cavan Scott & Mark Wright,7th,"Ace, Hex, Nimrod, Aristedes",September 2010
+140,7WN,A Death in the Family,Steven Hall,7th,"Ace, Hex, Evelyn, Nobody No-One",October 2010
+141,7WO,Lurkers at Sunlight's Edge,Marty Ross,7th,"Ace, Hex",November 2010
+142,6CQ,"The Demons of Red Lodge and Other Stories
+""The Demons of Red Lodge""
+""The Entropy Composition""
+""Doing Time""
+""Special Features""","Jason Arnopp
+Rick Briggs
+William Gallagher
+John Dorney",5th,Nyssa,December 2010
+143,7CNA,The Crimes of Thomas Brewster,Jonathan Morris,6th,"Evelyn, Brewster, Flip, DI Menzies",January 2011
+144,7CNB,The Feast of Axos,Mike Maddox,6th,"Evelyn, Brewster, Axos",February 2011
+145,7CNC,Industrial Evolution,Eddie Robson,6th,"Evelyn, Brewster",March 2011
+146,6HD,Heroes of Sontar,Alan Barnes,5th,"Nyssa, Tegan, Turlough,Sontarans",April 2011
+147,6HE,Kiss of Death,Stephen Cole,5th,"Nyssa, Tegan, Turlough",May 2011
+148,6HF,Rat Trap,Tony Lee,5th,"Nyssa, Tegan, Turlough",June 2011
+149,7WP (7ZAA)***,Robophobia,Nicholas Briggs,7th,Voc Robots,July 2011
+150,6ZAA,"Recorded Time and Other Stories
+""Recorded Time""
+""Paradoxicide""
+""A Most Excellent Match""
+""Question Marks""","Catherine Harvey
+Richard Dinnick
+Matt Fitton
+Philip Lawrence",6th,Peri,August 2011
+151,7WQ (7ZAB)***,The Doomsday Quatrain,Emma Beeby & Gordon Rennie,7th,,September 2011
