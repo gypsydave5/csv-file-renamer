@@ -32,17 +32,11 @@ puts "\nPlease enter an index number to add the header to the new file name."
 input = "1"
 file_name_construct = []
 while input != ""
-  if file_name_construct.empty?
-    puts "No file format currently created"
-  elsif file_name_construct.last >= csv_array[0].length
-    puts "\nInvalid index number... reverting"
+    if !(file_name_construct.empty?) && (file_name_construct.last >= csv_array[0].length)
+        puts "\nInvalid index number... reverting"
     file_name_construct.pop
-    if file_name_construct.empty?
-      puts "No file format currentl created"
-    else
-    print "\nFile name format is: "
-    print generate_file_name(file_name_construct, csv_array, 0, "_", ["<",">"])
     end
+  if file_name_construct.empty?  puts "No file format currently created"
   else
   print "\nFile name format is: "
   print generate_file_name(file_name_construct, csv_array, 0, "_", ["<",">"])
@@ -65,6 +59,6 @@ end
 
 file_name_construct.pop
 print "\nFile name format is: "
-print generate_file_name(file_name_construct, csv_array, 0, "_", ["<",">"])
+puts generate_file_name(file_name_construct, csv_array, 0, "_", ["<",">"])
 
 
