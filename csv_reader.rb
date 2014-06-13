@@ -67,14 +67,18 @@ end
 print "\nFile name format is: "
 puts generate_file_name(file_name_construct, csv_array, 0, "_", ["<",">"])
 
-print "\nPlease enter file path of file(s) to be renamed (or ENTER for current): "
+filepath = ""
+while !File.directory?(filepath)
+print "\nPlease enter file path to file(s) to be renamed (or ENTER for current): "
 filepath = gets.chomp
-if filepath == ""
-  filepath = "."
+  if filepath == ""
+    filepath = "."
+  end
+  puts "Invalid path!\n" if !File.directory?(filepath)
 end
-
-print "\nWhich files would you like to rename?\nPlease enter search string (or ENTER for all): "
 Dir.chdir(filepath)
+puts "Changing files in #{Dir.pwd}\n"
+print "\nWhich files would you like to rename?\nPlease enter search string (or ENTER for all): "
 search_string = gets.chomp
 
 if search_string == ""
