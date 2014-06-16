@@ -6,11 +6,13 @@ def generate_file_name(file_format_array, csv_name, row_number, seperator="_", b
   file_name = ""
   file_name << braces[0] + csv_name[row_number][file_format_array.first] + braces[1]
   file_format_array.drop(1).each do |index|
+    if csv_name[row_number][index] != nil
     file_name << seperator
     file_name << braces[0] + csv_name[row_number][index] + braces[1]
+    end
   end
-  file_name << extension
   file_name = reformat_filename(file_name)
+  file_name << extension
   file_name
 end
 
@@ -23,8 +25,10 @@ def check_format_array(file_format_array, csv_name)
   return true
 end
 
-def reformat_filename (filename)
+def reformat_filename(filename)
   filename.gsub! (/\s/) , "-"
+  filename.gsub! (/,/) , ""
+  filename
 end
 
 if ARGV.empty?
@@ -107,6 +111,7 @@ if file_extension != ""
   file_array.each.with_index do |file, index|
     extension = file.match (/\..*/)
     file_rename_map[file] = generate_file_name(file_name_construct, csv_array, index + 1) + extension[0]
+    file_rename_map[file] = reformat_filename(file_rename_map[file])
   end
 end
 
