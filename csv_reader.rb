@@ -1,43 +1,20 @@
 #!/usr/bin/ruby
 require 'fileutils'
+require 'csv'
 
-class File_rename_csv
-
-  require 'csv.rb'
-
-  attr_accessor :seperator, :test_braces, :extension
-
-  attr_reader :filename_format_array
-
-
-  def initialize(csv_file)
-    @csv_array = CSV.read(csv_file)
-    @headers = @csv_array[0]
-  end
-
-  @filename_format_array = []
-  @seperator = "_"
-  @test_braces = ["<",">"]
-  @extension = ""
-  @filename_format = ""
-  @headers = []
-
-  def generate_filename_format
-    @filename_format = ""
-    @filename_format << @test_braces[0] + this[0] +
-  end
-  
-  def generate_file_name(file_format_array, csv_name, row_number, seperator="_", braces=["",""], extension="")
-    file_name = ""
-    file_name << braces[0] + csv_name[row_number][file_format_array.first] + braces[1]
-    file_format_array.drop(1).each do |index|
-      file_name << seperator
-      file_name << braces[0] + csv_name[row_number][index] + braces[1]
+def generate_file_name(file_format_array, csv_name, row_number, seperator="_", braces=["",""], extension="")
+  file_name = ""
+  file_name << braces[0] + csv_name[row_number][file_format_array.first] + braces[1]
+  file_format_array.drop(1).each do |index|
+    if csv_name[row_number][index] != nil
+    file_name << seperator
+    file_name << braces[0] + csv_name[row_number][index] + braces[1]
     end
-    file_name << extension
-    file_name = reformat_filename(file_name)
-    file_name
   end
+  file_name = reformat_filename(file_name)
+  file_name << extension
+  file_name
+end
 
   def check_format_array(file_format_array, csv_name)
     file_format_array.each do |index|
@@ -48,9 +25,12 @@ class File_rename_csv
     return true
   end
 
-  def reformat_filename (filename)
-    filename.gsub! (/\s/) , "-"
-  end
+
+def reformat_filename(filename)
+  filename.gsub! (/\s/) , "-"
+  filename.gsub! (/,/) , ""
+  filename
+end
 
   if ARGV.empty?
     print "Name of csv file to operate on: "
@@ -58,7 +38,6 @@ class File_rename_csv
   else
     filename = ARGV.shift
   end
-end
 
 
 csv_array = CSV.read(filename)
@@ -134,6 +113,7 @@ if file_extension != ""
   file_array.each.with_index do |file, index|
     extension = file.match (/\..*/)
     file_rename_map[file] = generate_file_name(file_name_construct, csv_array, index + 1) + extension[0]
+    file_rename_map[file] = reformat_filename(file_rename_map[file])
   end
 end
 
