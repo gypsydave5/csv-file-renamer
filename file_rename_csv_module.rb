@@ -1,65 +1,39 @@
 #!/usr/bin/ruby
 require 'fileutils'
+require 'csv'
 
-class File_rename_csv
-
-  require 'csv.rb'
-
-  attr_accessor :seperator, :test_braces, :extension
-
-  attr_reader :filename_format_array
-
-
-  def initialize(csv_file)
-    @csv_array = CSV.read(csv_file)
-    @headers = @csv_array[0]
+Module
+def generate_file_name(file_format_array, csv_name, row_number, seperator="_", braces=["",""], extension="")
+  file_name = ""
+  file_name << braces[0] + csv_name[row_number][file_format_array.first] + braces[1]
+  file_format_array.drop(1).each do |index|
+    file_name << seperator
+    file_name << braces[0] + csv_name[row_number][index] + braces[1]
   end
-
-  @filename_format_array = []
-  @seperator = "_"
-  @test_braces = ["<",">"]
-  @extension = ""
-  @filename_format = ""
-  @headers = []
-
-  def generate_filename_format
-    @filename_format = ""
-    @filename_format << @test_braces[0] + this[0] +
-  end
-  
-  def generate_file_name(file_format_array, csv_name, row_number, seperator="_", braces=["",""], extension="")
-    file_name = ""
-    file_name << braces[0] + csv_name[row_number][file_format_array.first] + braces[1]
-    file_format_array.drop(1).each do |index|
-      file_name << seperator
-      file_name << braces[0] + csv_name[row_number][index] + braces[1]
-    end
-    file_name << extension
-    file_name = reformat_filename(file_name)
-    file_name
-  end
-
-  def check_format_array(file_format_array, csv_name)
-    file_format_array.each do |index|
-      if index >= csv_name[0].length
-        return false
-      end
-    end
-    return true
-  end
-
-  def reformat_filename (filename)
-    filename.gsub! (/\s/) , "-"
-  end
-
-  if ARGV.empty?
-    print "Name of csv file to operate on: "
-    filename = gets.chomp
-  else
-    filename = ARGV.shift
-  end
+  file_name << extension
+  file_name = reformat_filename(file_name)
+  file_name
 end
 
+def check_format_array(file_format_array, csv_name)
+  file_format_array.each do |index|
+    if index >= csv_name[0].length
+      return false
+    end
+  end
+  return true
+end
+
+def reformat_filename (filename)
+  filename.gsub! (/\s/) , "-"
+end
+
+if ARGV.empty?
+  print "Name of csv file to operate on: "
+  filename = gets.chomp
+else
+  filename = ARGV.shift
+end
 
 csv_array = CSV.read(filename)
 

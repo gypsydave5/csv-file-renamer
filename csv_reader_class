@@ -5,15 +5,9 @@ class File_rename_csv
 
   require 'csv.rb'
 
-  attr_accessor :seperator, :test_braces, :extension
+  attr_accessor :seperator, :test_braces, :extension, :array_of_files
 
   attr_reader :filename_format_array
-
-
-  def initialize(csv_file)
-    @csv_array = CSV.read(csv_file)
-    @headers = @csv_array[0]
-  end
 
   @filename_format_array = []
   @seperator = "_"
@@ -21,31 +15,28 @@ class File_rename_csv
   @extension = ""
   @filename_format = ""
   @headers = []
+  @array_of_files = []
+
+  def initialize(csv_file)
+    @csv_array = CSV.read(csv_file)
+    @headers = @csv_array[0]
+  end
 
   def generate_filename_format
     @filename_format = ""
-    @filename_format << @test_braces[0] + this[0] +
-  end
-  
-  def generate_file_name(file_format_array, csv_name, row_number, seperator="_", braces=["",""], extension="")
-    file_name = ""
-    file_name << braces[0] + csv_name[row_number][file_format_array.first] + braces[1]
-    file_format_array.drop(1).each do |index|
-      file_name << seperator
-      file_name << braces[0] + csv_name[row_number][index] + braces[1]
+    @filename_format << @test_braces[0] + @headers[@filename_format_array.first] + braces[1]
+    @filename_format_array.drop(1).each do |header|
+      @filename_format << @seperator + braces[0] + @headers[header] + braces[1]
     end
-    file_name << extension
-    file_name = reformat_filename(file_name)
-    file_name
+    @filename_format << extension
   end
 
-  def check_format_array(file_format_array, csv_name)
-    file_format_array.each do |index|
-      if index >= csv_name[0].length
-        return false
-      end
+  def write_to_filename_format_array(input)
+    if (input.class != Fixnum) || input > @headers.size
+      throw "Invalid input"
+    else
+      @filename_format_array << input
     end
-    return true
   end
 
   def reformat_filename (filename)
