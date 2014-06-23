@@ -1,6 +1,7 @@
 #!/usr/bin/ruby
 require 'fileutils'
 require './csv_reader_class.rb'
+require './csv_reader_cont.rb'
 
 if ARGV.empty?
   print "Name of csv file to operate on: "
@@ -11,7 +12,7 @@ end
 
 csv = File_rename_csv.new(filename)
 
-input = "bob"
+input = "1"
 while input != ""
   puts "Interactive mode \n\n"
   print "Current file name format: "
@@ -21,7 +22,7 @@ while input != ""
   csv.headers.each.with_index do |header, index|
     puts "#{index}: #{header}"
   end
-  print "\nPlease enter index of next header in file name\n(hit RETURN when DONE,'o' to start OVER, 'd' to delete last header): "
+  print "\nPlease enter index of next header in file name\n(hit RETURN when DONE,'o' to start OVER, 'd' to DELETE last header): "
   input = gets.chomp
   case input
     when "o"
@@ -40,4 +41,28 @@ if csv.target_directory.empty?
   puts "Target directory set to #{csv.target_directory}"
 end
 
+if csv.read_extension.empty?
+    puts "Select extension of files to target (hit return for all files): "
+    input = gets.chomp
+    csv.read_extension = input
+    puts "Target file extension is #{csv.read_extension}"
+end
 
+puts "Loading file names..."
+
+csv.load_filenames
+
+puts "Files loaded and sorted: "
+p csv.array_of_files
+
+p csv.generate_filename(1)
+#p csv.generate_filename(2)
+p csv.generate_filename(3)
+p csv.generate_filename(4)
+p csv.generate_filename(6)
+p csv.generate_filename(7)
+p csv.generate_filename(8)
+p csv.generate_filename(9)
+p csv.generate_filename(10)
+p csv.create_rename_map
+p csv.file_rename_map

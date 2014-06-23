@@ -5,7 +5,7 @@ class File_rename_csv
 
   require 'csv.rb'
 
-  attr_accessor :seperator, :test_braces, :extension, :array_of_files, :space_replacement, :filename_format, :headers, :target_directory
+  attr_accessor :seperator, :test_braces, :read_extension, :write_extension, :array_of_files, :space_replacement, :filename_format, :headers, :target_directory, :file_rename_map
 
   attr_reader :filename_format_array
 
@@ -15,13 +15,14 @@ class File_rename_csv
     @headers = @csv_array[0]
     @seperator = "_"
     @test_braces = ["<",">"]
-    @write_extension = ""
+    @write_extension = nil
     @read_extension = ""
     @filename_format = ""
     @array_of_files = []
     @filename_format_array = []
     @space_replacement = "-"
     @target_directory = ""
+    @file_rename_map = {}
   end
 
   def generate_filename_format
@@ -34,7 +35,24 @@ class File_rename_csv
         @filename_format << @seperator + @test_braces[0] + @headers[header] + @test_braces[1]
       end
     end
-    @filename_format << @write_extension
+    if !@write_extension.nil?
+        @filename_format << "." + @write_extension
+    end
+  end
+
+  def generate_filename(index)
+      filename = ""
+      filename << @csv_array[index][@filename_format_array.first]
+      p filename
+      @filename_format_array.drop(1).each do |section|
+          filename << @seperator + @csv_array[index][section] if !@csv_array[index][section].nil?
+          p filename
+      end
+      filename = reformat_filename(filename)
+      if !@write_extension.nil?
+          filename << "." + @write_extension
+      end
+      return filename
   end
 
   def write_to_filename_format_array(input)
@@ -58,8 +76,32 @@ class File_rename_csv
     @filename_format_array.pop
   end
 
-  def reformat_filename (filename)
-    filename.gsub! (/\s/) , "-"
+  def reformat_filename(input)
+    input.gsub! (/\s/) , "-"
+    input.gsub! (/,./) , "-"
+    input
+  end
+
+  def sort_filenames (sort_type="a")
+    case sort_type
+      when "a"
+        @array_of_files.sort! {|x, y| x.to_s <=> y.to_s}
+      when "n"
+        @array_of_files.sort! {|x, y| x.to_i <=> y.to_i}
+    end
+  end
+
+  def load_filenames
+      Dir.chdir(@target_directory)
+      @read_extension = "*" if @read_extension.empty?
+      @array_of_files = Dir["*." + @read_extension]
+      sort_filenames("n")
+  end
+
+  def create_rename_map
+      @array_of_files.each.with_index do |file, index|
+          @file_rename_map[file] = generate_filename(index + 1)
+      end
   end
 
 end
