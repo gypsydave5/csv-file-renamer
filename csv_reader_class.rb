@@ -5,7 +5,7 @@ class File_rename_csv
 
   require 'csv.rb'
 
-  attr_accessor :seperator, :test_braces, :extension, :array_of_files
+  attr_accessor :seperator, :test_braces, :extension, :array_of_files, :space_replacement, :filename_format, :headers, :target_directory
 
   attr_reader :filename_format_array
 
@@ -15,28 +15,47 @@ class File_rename_csv
     @headers = @csv_array[0]
     @seperator = "_"
     @test_braces = ["<",">"]
-    @extension = ""
+    @write_extension = ""
+    @read_extension = ""
     @filename_format = ""
     @array_of_files = []
     @filename_format_array = []
+    @space_replacement = "-"
+    @target_directory = ""
   end
 
   def generate_filename_format
     @filename_format = ""
-    @filename_format << @test_braces[0] + @headers[@filename_format_array.first] + @test_braces[1]
-    @filename_format_array.drop(1).each do |header|
-      @filename_format << @seperator + @test_braces[0] + @headers[header] + @test_braces[1]
+    if @filename_format_array.empty?
+      @filename_format << "NO_FORMAT_SET"
+    else
+      @filename_format << @test_braces[0] + @headers[@filename_format_array.first] + @test_braces[1]
+      @filename_format_array.drop(1).each do |header|
+        @filename_format << @seperator + @test_braces[0] + @headers[header] + @test_braces[1]
+      end
     end
-    @filename_format << extension
+    @filename_format << @write_extension
   end
 
   def write_to_filename_format_array(input)
-    # @filename_format_array = [] if @filename_format_array == nil
-    if (input.class != Fixnum) || input > @headers.size
-      throw "Invalid input"
+    begin
+      input = Integer(input) rescue "Input error"
+      if input > @headers.size - 1
+        raise ArgumentError, "Index number out of range", caller
+      end
+    rescue Exception => e
+      puts e.message
     else
       @filename_format_array << input
     end
+  end
+
+  def filename_format_reset
+    @filename_format_array = []
+  end
+
+  def filename_format_remove_last
+    @filename_format_array.pop
   end
 
   def reformat_filename (filename)
